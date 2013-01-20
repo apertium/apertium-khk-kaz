@@ -1,1 +1,33 @@
 * text=auto !eol
+/AUTHORS -text
+/COPYING -text
+/ChangeLog -text
+/Makefile.am -text
+/NEWS -text
+/README -text
+/apertium-khk-kaz.kaz-khk.lrx -text
+/apertium-khk-kaz.kaz-khk.rlx -text
+/apertium-khk-kaz.kaz-khk.t1x -text
+/apertium-khk-kaz.kaz-khk.t2x -text
+/apertium-khk-kaz.kaz.lexc -text
+/apertium-khk-kaz.kaz.twol -text
+/apertium-khk-kaz.khk-kaz.dix -text
+/apertium-khk-kaz.khk-kaz.lrx -text
+/apertium-khk-kaz.khk-kaz.rlx -text
+/apertium-khk-kaz.khk-kaz.t1x -text
+/apertium-khk-kaz.khk-kaz.t2x -text
+/apertium-khk-kaz.khk.lexc -text
+/apertium-khk-kaz.khk.twol -text
+/apertium-khk-kaz.post-kaz.dix -text
+/apertium-khk-kaz.post-tat.dix -text
+/apertium-view.sh -text
+/autogen.sh -text
+/configure.ac -text
+/kaz-khk.prob -text svneol=unset#unset
+/khk-kaz.prob -text svneol=unset#unset
+/modes.xml -text
+/pending-tests.sh -text
+/regression-tests.sh -text
+/testcorpus_khk-kaz.sh -text
+/update-morphs.bash -text
+/wiki-tests.sh -text
