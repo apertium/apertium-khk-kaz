@@ -2,7 +2,7 @@
 
 #assuming that you have the whole apertium tree in your source dir. and you are in khk-kaz directory
 
-python3 ../../trunk/apertium-tools/trim-lexc.py apertium-khk-kaz.khk-kaz.dix ../apertium-kaz/apertium-kaz.kaz.lexc ../apertium-khk/apertium-khk.khk.lexc
+python3 ../../trunk/apertium-tools/trim-lexc.py apertium-khk-kaz.khk-kaz.dix ../apertium-khk/apertium-khk.khk.lexc ../apertium-kaz/apertium-kaz.kaz.lexc
 
 cp /tmp/apertium-kaz.kaz.lexc.trimmed apertium-khk-kaz.kaz.lexc
 cp /tmp/apertium-khk.khk.lexc.trimmed apertium-khk-kaz.khk.lexc
