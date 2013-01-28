@@ -19,7 +19,7 @@
 /apertium-khk-kaz.khk.lexc -text
 /apertium-khk-kaz.khk.twol -text
 /apertium-khk-kaz.post-kaz.dix -text
-/apertium-khk-kaz.post-tat.dix -text
+/apertium-khk-kaz.post-khk.dix -text
 /apertium-view.sh -text
 /autogen.sh -text
 /configure.ac -text
