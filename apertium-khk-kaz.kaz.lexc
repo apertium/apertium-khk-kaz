@@ -1531,6 +1531,8 @@ LEXICON ModalParticles
 !====================!
  LEXICON Conjunctions
 
+және:және CC ; ! "and"
+бірақ:бірақ CC ; ! "but"
 
  LEXICON Postpositions
 
@@ -1718,21 +1720,35 @@ XXI NUM-ROMAN ; ! ""
  LEXICON Nouns
 
 банк:банк N1 ; ! "bank"
+бастық:бастық N1 ; ! "head,chief"
+жас:жас N1 ; ! "age"
+кітап:кітап N1 ; ! "book"
+қол:қол N1 ; ! "hand"
+сағат:сағат N1 ; ! "hour"
 
  LEXICON ProperNouns
 
 
  LEXICON Adjectives
 
+дұрыс:дұрыс A1 ; ! "correct"
+жақсы:жақсы A1 ; ! "good"
+жаман:жаман A1 ; ! "bad"
 
  LEXICON Adverbs
 
+әбден:әбден ADV ; ! "extremely"
+қайта:қайта ADV ; ! "again"
+өте:өте ADV ; ! "very"
+жаңа:жаңа ADV-WITH-KI ; ! "a while ago's"
+қазір:қазір ADV-WITH-KI ; ! "now > the one now"
 
  LEXICON Verbs
 
 бол:бол V-IV ; ! "1. быть"
 бол:бол V-IV ; ! "be/become"
-үз:үз V-TV ; ! "cut,pluck" pluck
+көр:көр V-TV ; ! "see"
+қара:қара V-TV ; ! "look at"
 бол:бол Vinfl-AUX ; !
 
  LEXICON Interjections

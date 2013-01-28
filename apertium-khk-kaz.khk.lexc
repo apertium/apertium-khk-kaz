@@ -469,12 +469,23 @@ LEXICON Adv
 
 LEXICON Nouns
 
+цаг:цаг Ninfl ; ! "time/hour"
+цаг:цаг Ninfl-ExtraN ; ! "watch/clock"
+гар:гар Ninfl ; ! "hand"
+нас:нас Ninfl ; ! "age"
 
 LEXICON Verbs
 
+хар:хар%{ъ%} Vinfl-TV ; ! "look at"
 
 LEXICON Conjunctions
 
+бөгөөд:бөгөөд ConjCoo ; ! "along with" ?
+ба:ба ConjCoo ; ! "and"
+бас:бас ConjCoo ; ! "and"
+харин:харин ConjCoo ; ! ~"but"
+эсвэл:эсвэл ConjCoo ; ! "if"
+гэвч:гэвч ConjCoo ; ! "but"
 
 LEXICON Postpos
 
@@ -503,9 +514,22 @@ LEXICON PostAdv
 
 LEXICON Adverbs
 
+сайн:сайн Adv ; ! "well"
+их:их Adv ; ! "very"
+дахин:дахин Adv ; ! "again"
+одоо:ороо Adv ; ! "now"
+сая:сая Adv ; ! "just now"
+ягаад:ягаад Adv ; ! "why"
+тийм:тийм Adv ; ! "in such a way"
+илүү:илүү Adv ; ! "rather"
 
 LEXICON Adjectives
 
+ариун:ариун Adj ; ! "pure"
+сайхан:сайхан Adj ; ! "good"
+муу:муу Adj ; ! "bad"
+зөв:зөв Adj ; ! "correct"
+хэрэгтэй:хэрэгтэй Adj ; ! "necessary"
 
 LEXICON Particles
 
