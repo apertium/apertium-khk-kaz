@@ -7,33 +7,36 @@
 Multichar_Symbols
 ! Followed http://wiki.apertium.org/wiki/Turkic_languages
 
-! Part of speech categories
+! Part of speech categories = First-level tags
 %<n%>         ! Noun                       ! Зат есім
-%<np%>        ! Proper noun
+%<np%>        ! Proper noun                ! Жалқы есім
 %<adj%>       ! Adjective                  ! Сын есім
 %<num%>       ! Numeral                    ! Сан есім
-%<prn%>       ! Pronoun
-%<det%>       ! Determiner
-%<v%>         ! Verb
-%<vaux%>      ! Auxilary verb
+%<prn%>       ! Pronoun                    ! Есімдік
+%<det%>       ! Determiner                 ! Детерминатив
+%<v%>         ! Verb                       ! Етістік
+%<vaux%>      ! Auxilary verb              ! Көмекші етістік
 %<adv%>       ! Adverb                     ! Үстеу
 %<post%>      ! Postposition               ! Септеулік шылау
-%<postadv%>   ! Postadverb                 ! "Постүстеу"
-%<cnjcoo%>    ! Co-ordinating conjunction  ! жалғаулық шылау
-%<cnjsub%>    ! Sub-ordinating conjunction ! жалғаулық шылау
-%<cnjadv%>    ! Adverbial conjunction      ! жалғаулық шылау
-%<part%>      ! Particle
+%<postadv%>   ! Postadverb                 ! "Постүстеу" (*1)
+%<cnjcoo%>    ! Co-ordinating conjunction  ! Cалаластырғыш жалғаулық
+%<cnjsub%>    ! Sub-ordinating conjunction ! Cабақтастырғыш жалғаулық
+%<cnjadv%>    ! Adverbial conjunction      ! "Үстеу-жалғаулық"
 %<ij%>        ! Interjection               ! Одағай
-%<abbr%>      ! Abbreviation
-%<cop%>       ! Copula
+%<abbr%>      ! Abbreviation               ! Қысқарған сөз
+%<cop%>       ! Copula                     ! Копула
+%<part%>      ! Particle                   ! Демеулік
+%<ideo%>      ! Ideophone                  ! Еліктеу сөз
+
+! *1. Анықтаған сөздерінің артынан келетін үстеулер ("демеуліктер") !# ғана, -ақ
 
 ! Proper noun types
 %<top%>       ! Toponym
-%<ant%>       ! Anthroponym
-%<cog%>       ! Cognomen
-%<pat%>       ! Patronym                   ! Әке текті есім
+%<ant%>       ! Anthroponym  ! Кісі есімі
+%<cog%>       ! Cognomen     ! Фамилия
+%<pat%>       ! Patronym     ! Әке текті есім
 %<org%>       ! Organization
-%<al%>        ! Other
+%<al%>        ! Other        ! Басқалар
 
 !! gender of anthroponyms and cognoms
 %<m%>         ! Masculine
@@ -73,6 +76,7 @@ Multichar_Symbols
 %<abe%>       ! Abessive=Privative ! Лишительный
               !# -сыз/-сез (not used after posessives and cases)
 %<reas%>      ! Reason
+!обладательный !# LI (-лы/-ле) (not used after posessives and cases)
 
 ! Levels of comparison of adjectives
 %<comp%>      ! Comparative
@@ -137,8 +141,8 @@ Multichar_Symbols
 %<prc_plan%>  ! -{G}{A}л{I}             ! plan participle
               !# мен сөйлескелі келдім;
 !%<prc_irre%> ! -{E}{T}{I}н             ! irrealis participle
-              ! (This form is analyzed as <grp_impf> and <ger_impf> /IS/)
-              ! (this might be wrong)
+              ! (This form is analyzed as <grp_impf> and <ger_impf>)
+              ! (FIXME this might be wrong)
 
 !!! Verbal adverbs - Глагольные наречия
 %<gna_perf%>  ! -{I}п
@@ -168,7 +172,7 @@ Multichar_Symbols
 %<ger%>       ! -{U}
 %<ger_past%>  ! -{G}{A}н
 %<ger_perf%>  ! -{G}{A}нл{I}{K}   (stresses the fact that something happened)
-%<ger_ppot%>  ! -{A}рл{I}{K}
+%<ger_ppot%>  ! -{A}рл{I}{K}      (~the ability to do the denoted action)
               !# "_Сүйсінерлігі_ сол, өз сеніміне берік те адал халқымыз дінін
               !# сатпады, өзгенің тәтті де сылдыр сөзіне ермеді...";
 %<ger_abs%>   ! -уш{I}л{I}{K}          FIXME CHECK
@@ -191,11 +195,10 @@ Multichar_Symbols
 
 ! Modal particles
 %<qst%>       ! Modal question particle
-%<mod_foc%>   ! "Particles of politeness and ardent desire"
-              ! (as in [N. Poppe. Tatar Manual]) or
-              ! "what about ..." question particles" :)
-              ! (as in kir.lexc)
+%<emph%>      ! Emphasizing modal particle (for imperative and jussive/optative forms)
+              !# -шы/-ші
 %<mod_ass%>   ! Assertive modal particle
+              !# -ғой/-қой
 %<mod%>       ! Modal verbs (шығар, сияқты etc)
 
 ! Punctuation
@@ -270,6 +273,7 @@ Adjectives ;
 Adverbs;
 Verbs ;
 Interjections ;
+Ideophones ;
 Abbreviations ;
 Punctuation ;
 Digits ; ! Use/Circ
@@ -455,9 +459,9 @@ N-INFL-COMMON ;
 
 ! Modal/discourse particles
 
-LEXICON CLIT-MODFOC
+LEXICON CLIT-EMPH
 
-%+шы%<mod_foc%>:%>ш%{I%} # ;
+%+шы%<emph%>:%>ш%{I%} # ;
 # ;
 
 LEXICON CLIT-QST-MA
@@ -500,6 +504,10 @@ LEXICON CLIT-GENERAL ! Includes personal copula suffixes, therefore appears only
                      ! FIXME: to be checked whether leads to any overgeneration
 CLIT ;
 V-PERS-COP ;
+
+
+
+
 
 !!!!!!!!!!!!!!!!!!!!!!     NOMINAL INFLECTION (N-INFL-COMMON)
 
@@ -573,7 +581,7 @@ LEXICON ABE-ATTR/ADVL/SUBST
 %<subst%>: CASE-2 ;
 %<subst%>%<pl%>:%>%{L%}%{A%}р CASE-2 ;
 
-LEXICON ABE-ETC          ! Stuff which doesn't appear after possessives
+LEXICON Abessive          ! Doesn't appear after possessives
 
 !%<abe%>:%>с%{I%}з ATTR/ADVL/SUBST ;
 %+сыз%<post%>:%>с%{I%}з ABE-ATTR/ADVL/SUBST ;
@@ -592,7 +600,7 @@ CASE ;
 GENPOSS-ETC ;
 !%<adv%>:ш%{A%} # ;          ! FIXME: might not be quite the right place
 
-LEXICON POSS-REAL  ! P_2
+LEXICON POSS-REAL
 
 %<px1sg%>:%>%{I%}м CASE-ETC ;
 %<px2sg%>:%>%{I%}ң CASE-ETC ;
@@ -606,18 +614,20 @@ LEXICON POSS-REAL  ! P_2
 LEXICON POSSESSION ! I guess this was used once to implement some
                    ! recursive things, e.g. the sequence
                    ! [stem > poss-real > [ныкы]/дагы > poss-real > case]
-                   ! Some gerunds link to it /IS/
+                   ! Some gerunds link to it
 POSS-REAL ;
 
-LEXICON N-INFL-COMMON 
+LEXICON N-INFL-COMMON
 
 POSSESSION ;
 CASE-ETC ;
-ABE-ETC ; ! FIXME check whether this is possible after adjectives and other
-          ! subst. things.
-          ! Maybe a better idea is to restrict it to nouns and pronouns.
-          ! Actually, not all pronouns take it. "Синсез" vs "*үземсез".
-          ! Be careful :) /IS to himself/
+Abessive ; ! FIXME might lead to overgeneration:
+           !! check whether it occurs after substantivized stuff;
+           !! not all pronouns take it. "Синсез" vs "*үземсез".
+
+
+
+
 
 !!!!!!!!!!!!!!!!!!!!!!     ADJECTIVE'S (ADJECTIVIAL) INFLECTION (ADJ-COMMON)
 
@@ -873,11 +883,11 @@ LEXICON V-NONFINITE-REGULAR_NEGATIVE
 %<ger_impf%>:%>%{E%}т%{I%}н GER-POSS-REAL ;
 
 ! Imperatives
-%<imp%>%<p2%>%<sg%>: CLIT-MODFOC ;
-%<imp%>%<p2%>%<pl%>:%>%{I%}ң%>д%{A%}р CLIT-MODFOC ;
-%<imp%>%<p2%>%<frm%>%<sg%>:%>%{I%}ң%{I%}з CLIT-MODFOC ;
-%<imp%>%<p2%>%<frm%>%<sg%>:%>%{I%}ң CLIT-MODFOC ;     ! Dir/LR FIXME CHECK
-%<imp%>%<p2%>%<frm%>%<pl%>:%>%{I%}ң%{I%}з%>д%{A%}р CLIT-MODFOC ;
+%<imp%>%<p2%>%<sg%>: CLIT-EMPH ;
+%<imp%>%<p2%>%<pl%>:%>%{I%}ң%>д%{A%}р CLIT-EMPH ;
+%<imp%>%<p2%>%<frm%>%<sg%>:%>%{I%}ң%{I%}з CLIT-EMPH ;
+%<imp%>%<p2%>%<frm%>%<sg%>:%>%{I%}ң CLIT-EMPH ;                ! Dir/LR FIXME CHECK
+%<imp%>%<p2%>%<frm%>%<pl%>:%>%{I%}ң%{I%}з%>д%{A%}р CLIT-EMPH ;
 
 ! Optative/jussive forms
 %<opt%>%<p1%>%<sg%>:%>%{A%}й%{I%}н CLIT ;
@@ -980,6 +990,7 @@ LEXICON PersonalPronouns
 сен%<prn%>%<pers%>%<p2%>%<sg%>:с PRON-12SG-CASES ;
 
 ол%<prn%>%<pers%>%<p3%>%<sg%>%<nom%>:ол CLIT ;
+ол%<prn%>%<pers%>%<p3%>%<sg%>%<nom%>:о CLIT ; ! Dir/LR
 ол%<prn%>%<pers%>%<p3%>%<sg%>%<gen%>:оның CLIT ;
 ол%<prn%>%<pers%>%<p3%>%<sg%>%<dat%>:оған CLIT ;
 ол%<prn%>%<pers%>%<p3%>%<sg%>%<acc%>:оны CLIT ;
@@ -1024,7 +1035,7 @@ LEXICON PRON-DEM-INFL
 %<loc%>:нда CLIT-GENERAL ;
 %<px%>:нікі%{n%} CASE ;
 %<loc%>:ндагы ATTR/SUBST ;
-%<sim%>:ндай CASE ;
+%<sim%>:ндай CASE ;  ! FIXME: should have <det>, etc.
 %<adv%>:лай CLIT-GENERAL ;
 %<qnt%>:нша CLIT ;         !
 
@@ -1049,6 +1060,7 @@ LEXICON PRON-DEM-BUL
 ! we loose things like бу<prn><dem><pl><px>:боларныкы /I.S./
 
 бұл%<prn%>%<dem%>%<nom%>:бұл CLIT-GENERAL ;
+бұл%<prn%>%<dem%>%<nom%>:бұ CLIT-GENERAL ; ! Dir/LR
 бұл%<prn%>%<dem%>%<gen%>:бұның CLIT ;
 бұл%<prn%>%<dem%>%<gen%>:мұның CLIT ; ! Dir/LR
 бұл%<prn%>%<dem%>%<dat%>:бұған CLIT ;
@@ -1069,6 +1081,7 @@ LEXICON PRON-DEM-BUL
 бұл%<prn%>%<dem%>%<sim%>%<pl%>:мұндайлар CASE ;
 бұл%<prn%>%<dem%>%<sim%>%<pl%>%<px3sp%>:мұндайлары%{n%} CASE ;
 бұл%<prn%>%<dem%>%<adv%>:былай CLIT-GENERAL ;
+бұл%<prn%>%<dem%>%<adv%>:бұлай CLIT-GENERAL ; ! Dir/LR
 бұл%<prn%>%<dem%>%<qnt%>:мұнша CLIT ;
 бұл%<prn%>%<dem%>%<px3sp%>:бұнысы%{n%} CASE ;
 
@@ -1117,7 +1130,7 @@ PRON-DEM-BUL ;
 PRON-DEM-MINA ;
 PRON-DEM-ANA ;
 
-сол%<prn%>%<dem%>%<nom%>:cол CLIT-GENERAL ;
+сол%<prn%>%<dem%>%<nom%>:сол CLIT-GENERAL ;
 сол%<prn%>%<dem%>:со PRON-DEM-INFL ;
 сол%<prn%>%<dem%>%<ins%>:сонымен CLIT ;
 сол%<prn%>%<dem%>%<px3sp%>:сонысы%{n%} CASE ;
@@ -1132,14 +1145,12 @@ PRON-DEM-ANA ;
 осы%<prn%>%<dem%>%<ins%>:осымен CLIT ;
 осы%<prn%>%<dem%>%<px3sp%>:осысы%{n%} CASE ;
 
-! FIXME DISCUSS: Since <reas><abl> is a feature only of "ol" and "sol",
-! below were going to be lexicalised and added as subordinative
-! conjunctions. /IS/
-! This is a bad idea though, because -ндықтан affix is a feature of verbs
-! as well, so we'll have to consider it a productive derivation anyway /IS/
+! FIXME DISCUSS: Two below were lexicalized as conjunctional adverbs.
+! -ндықтан affix is a feature of verbs as well though, so it will be handled as a
+! productive derivation.
 
-ол%<prn%>%<dem%>%<reas%>%<abl%>:ондықтан # ; ! "because of that"
-сол%<prn%>%<dem%>%<reas%>%<abl%>:сондықтан # ; ! "because of that"
+!ол%<prn%>%<dem%>%<reas%>%<abl%>:ондықтан # ; ! "because of that"
+!сол%<prn%>%<dem%>%<reas%>%<abl%>:сондықтан # ; ! "because of that"
 
 
 !!!!!!!   I N T E R R O G A T I V E
@@ -1169,7 +1180,7 @@ PRON-DEM-ANA ;
 LEXICON PRON-ITG-INFL
 
 %<prn%>%<itg%>: GER-INFL ;
-%<prn%>%<itg%>%<pl%>: GER-INFL ;
+%<prn%>%<itg%>%<pl%>:%>%{L%}%{A%}р GER-INFL ;
 
 LEXICON PRON-ITG-QAYSI
 
@@ -1302,20 +1313,37 @@ LEXICON DET-REF
 %<det%>%<ref%>: # ;
 
 
-!!!!!!!!!!!!!!!!!!!!!!     PART-OF-SPEECH LEXICONS
+!!!!!!!!!!!!!!!!!!!!!!     OTHER PART-OF-SPEECH LEXICONS
+
+LEXICON N1-ABBR
+
+%<n%>%<attr%>: # ;
+%<n%>:%- POSSESSION ;
+%<n%>:%- CASE-ETC ;
+
 
 LEXICON N1
 
 %<n%>%<attr%>: # ;
 %<n%>: SUBST ;
 
+LEXICON N-COMPOUND-PX-COMMON
+
+:%>%{S%}%{I%}%{n%} CASE-ETC ;
+POSS-REAL ;       ! for stuff like "біздің ауа райымыз" and even "оның ауа райы",
+                  ! which should have a <px3sp> analysis
+
+
 LEXICON N-COMPOUND-PX ! consider "N2" for the name
                       ! equiv of kir:LEXICON N-INFL-3PX-COMPOUND
 
-%<n%>:%>%{S%}%{I%}%{n%} CASE-ETC ;
-%<n%>: POSS-REAL ;     ! for stuff like "біздің ауа райымыз" and even "оның ауа райы", which should have a <px3sp> analysis
+%<n%>: N-COMPOUND-PX-COMMON ;
+%<n%>%<pl%>:%>%{L%}%{A%}р%>%{S%}%{I%}%{n%} CASE-ETC ; ! (e.g. чик сакчылары=пограничники)
+                                                      !  FIXME CHECK: Is {S} needed here ?
+
 
 LEXICON N3
+! Singularia tantum
 
 %<n%>%<attr%>: # ;
 %<n%>: N-INFL-COMMON ;
@@ -1376,29 +1404,45 @@ LEXICON NP-COG-MF
 %<np%>%<cog%>%<mf%>: NP-COMMON ; 
 %<np%>%<cog%>%<mf%>%<pl%>:%>%{L%}%{A%}р NP-COMMON ;
 
+LEXICON NP-COG-OBIN-FEM
+
+%<np%>%<cog%>%<f%>:а NP-COMMON ;
+%<np%>%<cog%>%<f%>%<pl%>:а%>%{L%}%{A%}р NP-COMMON ;
+
+
 LEXICON NP-COG-OB
 
-! For cognoms ending with -ов, -ев, -ин
+! For cognoms ending with -ов, -ев
 ! They derive feminine equivalets taking -а /I.S./
 ! Also, even the ев ones are normally pronounced
 !    (and take harmony) as if they end in йыф/йып
 
-%<np%>%<cog%>%<m%>: NP-COMMON ;                       ! Dir/LR
-%<np%>%<cog%>%<m%>%<pl%>:%>%{L%}%{A%}р NP-COMMON ;    ! Dir/LR
+%<np%>%<cog%>%<m%>:%{☭%} NP-COMMON ;                       ! Dir/LR
+%<np%>%<cog%>%<m%>%<pl%>:%{☭%}%>%{L%}%{A%}р NP-COMMON ;    ! Dir/LR
 
 %<np%>%<cog%>%<m%>:%{а%}%{с%} NP-COMMON ;
 %<np%>%<cog%>%<m%>%<pl%>:%{а%}%{с%}%>%{L%}%{A%}р NP-COMMON ;
 
+NP-COG-OBIN-FEM ;
 
-%<np%>%<cog%>%<f%>:а NP-COMMON ;
-%<np%>%<cog%>%<f%>%<pl%>:а%>%{L%}%{A%}р NP-COMMON ;
+
+LEXICON NP-COG-IN
+
+! For cognoms ending with -ов, -ев, -ин
+! They derive feminine equivalets taking -а /I.S./
+
+%<np%>%<cog%>%<m%>:%{☭%} NP-COMMON ;
+%<np%>%<cog%>%<m%>%<pl%>:%{☭%}%>%{L%}%{A%}р NP-COMMON ;
+
+NP-COG-OBIN-FEM ;
+
 
 LEXICON NP-PAT-VICH
 
 ! For patronyms ending with -вич
 ! Their feminine equivalets end with -вна /I.S./
 
-%<np%>%<pat%>%<m%>:вич NP-COMMON ;
+%<np%>%<pat%>%<m%>:вич%{☭%} NP-COMMON ;
 
 %<np%>%<pat%>%<f%>:вна NP-COMMON ;
 
@@ -1406,15 +1450,29 @@ LEXICON NP-ORG
 
 %<np%>%<org%>: CASE ; 
 
+LEXICON NP-ORG-COMPOUND 
+
+%<np%>%<org%>: N-COMPOUND-PX-COMMON ;   ! COMMON because no plural
+
 LEXICON NP-AL
 
 %<np%>%<al%>: CASE ; 
 
-LEXICON NUM
+LEXICON NUM-COMMON
 
 %<num%>: # ;
 %<num%>%<subst%>: SUBST ;
+
+LEXICON NUM
+
+NUM-COMMON ;
+%<num%>%<ord%>:%>%{I%}нш%{I%} # ;             ! FIXME: base form, <det> reading
 %<num%>%<ord%>:%>%{I%}нш%{I%} N-INFL-COMMON ;
+
+LEXICON NUM-TWENTY
+
+NUM-COMMON ;
+%<num%>%<ord%>:%>с%{I%}нш%{I%} N-INFL-COMMON ;
 
 LEXICON NUM-ITG ! This is a temporal solution
                 ! (could be integrated with the above)
@@ -1428,15 +1486,15 @@ LEXICON NUM-COLL
 %<num%>%<coll%>%<subst%>: N-INFL-COMMON ;
 %<num%>%<coll%>%<advl%>: # ;
 
-LEXICON DIGITLEX
-
-%<num%>: # ;
-
 LEXICON NUM-ROMAN
 
 %<num%>%<ord%>: # ;
 
-LEXICON POST 
+LEXICON DIGITLEX
+
+%<num%>: # ;
+
+LEXICON POST
 
 %<post%>: CLIT ;
 
@@ -1480,11 +1538,15 @@ LEXICON CS
 
 LEXICON CA
 
-%<cnjadv%>: # ; 
+%<cnjadv%>: CLIT-GHANA-ETC ;
 
 LEXICON QST
 
-%<qst%>: # ; 
+%<qst%>: # ;
+
+LEXICON MOD-ASS
+
+%<mod_ass%>: # ;
 
 LEXICON MOD
 
@@ -1496,9 +1558,14 @@ LEXICON INTERJ
 
 %<ij%>: # ;
 
+LEXICON IDEO
+
+%<ideo%>: # ;
+
 LEXICON ABBR
 
 %<abbr%>: # ;
+
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                          L E X I C O N                                  !!!
@@ -1506,35 +1573,32 @@ LEXICON ABBR
 
 LEXICON ModalParticles
 
-ма:ма QST ; ! "" Dir/RL
+ма:%~ма QST ; ! "" Dir/RL
 ма:ма QST ; ! "" Dir/LR
 ма:ба QST ; ! "" Dir/LR
 ма:па QST ; ! "" Dir/LR
 ма:ме QST ; ! "" Dir/LR
 ма:бе QST ; ! "" Dir/LR
 ма:пе QST ; ! "" Dir/LR
+ше:ше QST ; ! ""
 
-! ~Modal verbs
-!=============
+ғой:%~ғой MOD-ASS ; ! "" Dir/RL
+ғой:ғой MOD-ASS ; ! "" Dir/LR
+ғой:қой MOD-ASS ; ! "" Dir/LR
 
-! FIXME
-! This is actually a modal verb, taking personal suffixes (V-PERS-S1).
-! Was required to tranlate tatar "-дыр"<mod_ind>
-! It requires some transfer rules (for replacing personal suffixes) as e.g. in
-! the following:
-!
-!# Олар мүмкiн көп кiтап оқыған шығар.
-!# Алар бәлки күп китап укыганнардыр.
-!
-! "сияқты" is similar too /IS/
-
-шығар:шығар MOD ;
+шығар:шығар MOD ; ! FIXME actually a verb, takes personal suffixes (V-PERS-S1);
+                  !   ... more like <vaux><pres> than like a full verb -JNW
+                  ! requires some transfer rules as e.g. in the following:
+                  !# (kaz) Олар мүмкiн көп кiтап оқыған шығар.
+                  !# (tat) Алар бәлки күп китап укыганнардыр.
+                  !# (kir) Алар мүмкүн көп китеп окугандыр.
 
 
 !====================!
  LEXICON Conjunctions
 
 және:және CC ; ! "and"
+және:жөне CC ; ! "and" Dir/LR FIXME CHECK
 бірақ:бірақ CC ; ! "but"
 
  LEXICON Postpositions
@@ -1542,26 +1606,16 @@ LEXICON ModalParticles
 дейін:дейін POST ; ! "until, up to, as far as" + DAT
 
  LEXICON Postadverbs
-!===================!
-
-
-%-ақ:%-ақ POSTADV ; ! ""
 
 ғана:%~ғана POSTADV ; ! Dir/RL
 ғана:ғана POSTADV ;   ! "only" Dir/LR
 ғана:қана POSTADV ;   ! "only" Dir/LR
-
 да:%~да POSTADV ; ! "1. even if"     Dir/RL
 да:да POSTADV ; ! ""       Dir/LR
 да:де POSTADV ; ! ""       Dir/LR
 да:та POSTADV ; ! ""       Dir/LR
 да:те POSTADV ; ! ""       Dir/LR
 
-тағы POSTADV ; ! "... дагы" = "and ... too" ! FIXME:CHECK pos
-тегіс POSTADV ; ! "entirely/all/all together"
-
-
-!================!
  LEXICON Pronouns
 !================!
 
@@ -1572,9 +1626,11 @@ DemonstrativePronouns ;
 InterrogativePronouns ;
 
 бірдеме:бірдеме PRON-IND ; ! "something"
+бір% нәрсе:бір% нәрсе PRON-IND ; ! "something" Use/MT
 басқа:басқа PRON-IND ; ! "other"
 ! бәрі PRON-IND ; ! "everyone"  !!! This is an alternate of below ! FIXME: true for Kazakh too?
 бәрі:бәр PRON-IND-POSS ; ! "everyone"  ! FIXME: in the end, this really shouldn't create <px*> tags too (same problem for kymorph)
+кей:кей PRON-IND ; ! "some" FIXME CHECK
 
 барлық:барлық PRON-QNT ; ! ""
 біреу:біреу PRON-QNT ; ! ""
@@ -1598,7 +1654,9 @@ InterrogativePronouns ;
 анау:анау DET-DEM ;
 әлгі:әлгі DET-DEM ; ! "~этот"
 бұл:бұл DET-DEM ;
+ол:ол DET-DEM ; 
 мынау:мынау DET-DEM ;
+ол:ол DET-DEM ;
 осы:осы DET-DEM ;
 сол:сол DET-DEM ;
 сонау:сонау DET-DEM ;
@@ -1624,9 +1682,11 @@ InterrogativePronouns ;
 миллиондаған:миллиондаған DET-QNT ; ! ""
 миллиардтаған:миллиардтаған DET-QNT ; ! ""
 күллі:күллі DET-QNT ; ! ""
+исі:исі DET-QNT ; ! ""
 
 әлдебір:әлдебір DET-IND ; ! "a"
 бір:бір DET-IND ; ! "a"
+кей:кей DET-IND ; ! "some"
 кейбір:кейбір DET-IND ; ! "some"
 қайсыбір:қайсыбір DET-IND ; ! "some"
 әлденеше:әлденеше DET-IND ; ! ""
@@ -1640,7 +1700,11 @@ InterrogativePronouns ;
 
 өз:өз DET-REF ; ! "oneself's"
 
-LEXICON Numerals
+
+!================!
+ LEXICON Numerals
+!================!
+
 
 нөл:нөл NUM ; ! "zero"
 бір:бір NUM ; ! "one"
@@ -1650,12 +1714,12 @@ LEXICON Numerals
 бес:бес NUM ; ! "five"
 алты:алты NUM ; ! "six"
 жеті:жеті NUM ; ! "seven"
-сегіз:сегіз NUM ; ! "eight" 
+сегіз:сегіз NUM ; ! "eight"
 тоғыз:тоғыз  NUM ; ! "nine"
 он:он NUM ; ! "ten"
 
-он% бір:он% бір NUM ; ! "eleven"       ! These are needed only because the corresponding
-он% екі:он% екі NUM ; ! "twelve"       ! tatar numerals are written as one word
+он% бір:он% бір NUM ; ! "eleven"
+он% екі:он% екі NUM ; ! "twelve"
 он% үш:он% үш NUM ; ! "thirteen"
 он% төрт:он% төрт NUM ; ! "fourteen"
 он% бес:он% бес NUM ; ! "fifteen"
@@ -1664,7 +1728,7 @@ LEXICON Numerals
 он% сегіз:он% сегіз NUM ; ! "eighteen"
 он% тоғыз:он% тоғыз NUM ; ! "nineteen"
 
-жиырма:жиырма NUM ; ! "twenty"         ! FIXME: This has an exceptional ordinal form: жиырмасыншы
+жиырма:жиырма NUM-TWENTY ; ! "twenty"
 отыз:отыз NUM ; ! "thirty"
 қырық:қырық NUM ; ! "forty"
 елу:елу NUM ; ! "fifty"
@@ -1680,22 +1744,15 @@ LEXICON Numerals
 миллиард:миллиард NUM ; ! "billion"
 триллион:триллион NUM ; ! "trillion"
 
-!ширек:ширек NUM ; ! "quarter"         ! FIXME:DISCUSS: POS
-!жарым:жарым NUM ; ! "half"            ! (consider that they don't have ordinal form obviously)
-!жарты:жарты NUM ; ! "half"
-
+! Technically this goes on to higher numbers,
+! but its use beyond 7 is rare and is of questionable grammaticality
 бір:біреу NUM-COLL ;
 екі:екеу NUM-COLL ;
 үш:үшеу NUM-COLL ;
 төрт:төртеу NUM-COLL ;
 бес:бесеу NUM-COLL ;
-алтау:алтау NUM-COLL ;
-жетеу:жетеу NUM-COLL ;
-
-! Technically this goes on to higher numbers
-! but its use beyond 5(?) is rare
-! and is of questionable grammaticality /not-I.S./
-! Grammar says first 7 numerals have this form, so let's extend it to 7 /I.S./
+алты:алтау NUM-COLL ;
+жеті:жетеу NUM-COLL ;
 
 I NUM-ROMAN ; ! ""
 II NUM-ROMAN ; ! ""
@@ -1725,11 +1782,17 @@ XXI NUM-ROMAN ; ! ""
 !=============!
  LEXICON Nouns
 
-банк:банк N1 ; ! "bank"
+алаң:алаң N1 ; ! "area"
+бала:бала N1 ; ! "child"
+банк:банк N5 ; ! "bank"
 бастық:бастық N1 ; ! "head,chief"
+дүкен:дүкен N1 ; ! "shop"
 жас:жас N1 ; ! "age"
+киім:киім N1 ; ! ""
+кісі:кісі N1 ; ! "man,person"
 кітап:кітап N1 ; ! "book"
 қол:қол N1 ; ! "hand"
+қыз:қыз N1 ; ! "girl,daughter,virgin"
 сағат:сағат N1 ; ! "hour"
 
  LEXICON ProperNouns
@@ -1738,24 +1801,31 @@ XXI NUM-ROMAN ; ! ""
 
  LEXICON Adjectives
 
+кіші:кіші A2 ; ! ""
 дұрыс:дұрыс A1 ; ! "correct"
 жақсы:жақсы A1 ; ! "good"
 жаман:жаман A1 ; ! "bad"
 жаңа:жаңа A1 ; ! "new"
+керек:керек A1 ; ! ""
+кішкентай:кішкентай A1 ; ! "small, little"
+үлкен:үлкен A1 ; ! "big"
 
  LEXICON Adverbs
 
 әбден:әбден ADV ; ! "extremely"
 қайта:қайта ADV ; ! "again"
 өте:өте ADV ; ! "very"
+қазір:қазір ADV ; ! ""
 жаңа:жаңа ADV-WITH-KI ; ! "a while ago's"
 қазір:қазір ADV-WITH-KI ; ! "now > the one now"
 
  LEXICON Verbs
 
+бар:бар V-IV ; ! ""
 бол:бол V-IV ; ! "1. быть"
 бол:бол V-IV ; ! "be/become"
-көр:көр V-TV ; ! "see"
+көр:көрін V-TV-PASS ; ! "be seen"
+көр:көр V-TV-NOPASS ; ! "see"
 қара:қара V-TV ; ! "look at"
 бол:бол Vinfl-AUX ; !
 
@@ -1773,6 +1843,7 @@ XXI NUM-ROMAN ; ! ""
 бәрекелді:бәрекелді INTERJ ; ! ""
 бәсе:бәсе INTERJ ; ! ""
 болыпты:болыпты INTERJ ; ! "okay / that's it"
+дариға:дариға INTERJ ; ! ""
 демек:демек INTERJ ; ! "that is"
 дұрыс:дұрыс INTERJ ; ! "right"
 ей:ей INTERJ ; ! ""
@@ -1791,6 +1862,8 @@ XXI NUM-ROMAN ; ! ""
 өй:өй INTERJ ; ! ""
 түсінікті:түсінікті INTERJ ; ! "understood"
 уа:уа INTERJ ; ! ""
+әу:әу INTERJ ; ! ""
+ойбай:ойбай INTERJ ; ! ""
 
 ! Вводные слова
 ! =============
@@ -1801,6 +1874,12 @@ XXI NUM-ROMAN ; ! ""
 мәселен:мәселен INTERJ ; ! "e.g."
 мысалы:мысалы INTERJ ; ! "e.g."
 
+!==================!
+ LEXICON Ideophones
+!==================!
+
+арс:арс IDEO ; ! ""
+жарқ:жарқ IDEO ; ! ""
 
 !=====================!
  LEXICON Abbreviations
@@ -1817,6 +1896,7 @@ IMD:IMD ABBR ; ! ""
 Kaz:Kaz ABBR ; ! ""
 KPO:KPO ABBR ; ! ""
 KZ:KZ ABBR ; ! ""
+kz:kz ABBR ; ! ""
 ААҚ:ААҚ ABBR ; ! "Ашық акционердық коғам=Public company"
 АК:АК ABBR ; ! ""
 АКСР:АКСР ABBR ; ! ""
@@ -1838,7 +1918,7 @@ KZ:KZ ABBR ; ! ""
 геол%.:геол%. ABBR ; ! ""
 Гленкор:Гленкор ABBR ; ! ""
 ГЭС:ГЭС ABBR ; ! ""
-ДНҚ:ДНҚ ABBR ; ! ""
+ДНҚ:ДНҚ%{а%} ABBR ; ! "DNA"
 ЕҚЫҰ:ЕҚЫҰ ABBR ; ! "eng. OSCE, rus. ОБСЕ"
 Ембімұнайгаз:Ембімұнайгаз ABBR ; ! ""
 ЕурАзЭҚ:ЕурАзЭҚ ABBR ; ! ""
@@ -1865,6 +1945,7 @@ KZ:KZ ABBR ; ! ""
 ҚазМУ:ҚазМУ ABBR ; ! "Al-Farabi Kazakh National Universty"
 Қазмұнайгаз:Қазмұнайгаз ABBR ; ! ""
 Қазпошта:Қазпошта ABBR ; ! ""
+ҚазТАГ:ҚазТАГ ABBR ; ! ""
 ҚазҰУ:ҚазҰУ ABBR ; ! "Al-Farabi Kazakh National Universty"
 ҚКП:ҚКП ABBR ; ! ""
 ҚМДБ:ҚМДБ ABBR ; ! "Казакъстан Мөселманнары Диния Нәзараты"
@@ -1916,16 +1997,17 @@ KZ:KZ ABBR ; ! ""
 ШЫҰ:ШЫҰ ABBR ; ! "Shanghai Cooperaton Organization"
 экон%.:экон%. ABBR ; ! "economic"
 ЮНЕСКО:ЮНЕСКО ABBR ; ! ""
-
+EITI:EITI ABBR ; ! ""
+ЕО:ЕО ABBR ; ! ""
 
 !===================!
  LEXICON Punctuation
 !===================!
 
 
-.%<sent%>:. # ;
-..%<sent%>:.. # ;
-...%<sent%>:... # ;
+%.%<sent%>:%. # ;
+%.%.%<sent%>:%.%. # ;
+%.%.%.%<sent%>:%.%.%. # ;
 %;%<sent%>:%; # ;
 %:%<sent%>:%: # ;
 %!%<sent%>:%! # ;

@@ -474,10 +474,15 @@ LEXICON Nouns
 гар:гар Ninfl ; ! "hand"
 нас:нас Ninfl ; ! "age"
 ном:ном Ninfl ; ! "book"
+хүүхэд:хүүх%{а%}д Ninfl ; ! "child"
+хүн:хүн Ninfl-NoPl ; ! "person"
+хүн:хүмүүс Ninfl-Pl ; ! "person"
 
 LEXICON Verbs
 
 хар:хар%{ъ%} Vinfl-TV ; ! "look at"
+яв:яв%{ъ%} Vinfl-IV ; ! "go"
+оч:оч Vinfl-IV ; ! "go"
 
 LEXICON Conjunctions
 
@@ -494,11 +499,7 @@ LEXICON Postpositions
 
 LEXICON Postadverbs
 
-ч:ч PostAdv-Infl ; ! "not any"
-хамт:хамт PostAdv-Infl ; ! "together"
-биш:биш PostAdv-Infl ; ! "not"
 л:л PostAdv-Infl ; ! "only"
-
 
 LEXICON Adverbs
 
@@ -519,6 +520,9 @@ LEXICON Adjectives
 зөв:зөв Adj ; ! "correct"
 хэрэгтэй:хэрэгтэй Adj ; ! "necessary"
 шинэ:шинэ Adj ; ! "new"
+том:том Adj ; ! "big"
+жижиг:жиж%{а%}г Adj ; ! "small"
+жижигхэн:жижигх%{а%}н Adj ; ! "little"
 
 LEXICON Particles
 
