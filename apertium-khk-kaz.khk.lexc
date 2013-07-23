@@ -477,12 +477,16 @@ LEXICON Nouns
 хүүхэд:хүүх%{а%}д Ninfl ; ! "child"
 хүн:хүн Ninfl-NoPl ; ! "person"
 хүн:хүмүүс Ninfl-Pl ; ! "person"
+цус:цус Ninfl ; ! "blood"
 
 LEXICON Verbs
 
 хар:хар%{ъ%} Vinfl-TV ; ! "look at"
+ир:ир%{ъ%} Vinfl-IV ; ! "come"
 яв:яв%{ъ%} Vinfl-IV ; ! "go"
 оч:оч Vinfl-IV ; ! "go"
+сонго:сонго Vinfl-TV ; ! "choose"
+ойлго:ойлго Vinfl-TV ; ! "understand"
 
 LEXICON Conjunctions
 

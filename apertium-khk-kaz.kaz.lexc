@@ -1782,6 +1782,7 @@ XXI NUM-ROMAN ; ! ""
 !=============!
  LEXICON Nouns
 
+айлық:айлық N1 ; ! ""
 алаң:алаң N1 ; ! "area"
 бала:бала N1 ; ! "child"
 банк:банк N5 ; ! "bank"
@@ -1791,6 +1792,8 @@ XXI NUM-ROMAN ; ! ""
 киім:киім N1 ; ! ""
 кісі:кісі N1 ; ! "man,person"
 кітап:кітап N1 ; ! "book"
+қан:қан N1 ; ! "blood"
+қар:қар N1 ; ! "snow"
 қол:қол N1 ; ! "hand"
 қыз:қыз N1 ; ! "girl,daughter,virgin"
 сағат:сағат N1 ; ! "hour"
@@ -1822,12 +1825,19 @@ XXI NUM-ROMAN ; ! ""
  LEXICON Verbs
 
 бар:бар V-IV ; ! ""
+бер:бер V-TV ; ! "give"
+бер:бер V-TV ; ! "давать,отдавать,сдавать"
 бол:бол V-IV ; ! "1. быть"
 бол:бол V-IV ; ! "be/become"
+кел:кел V-IV ; ! "come"
 көр:көрін V-TV-PASS ; ! "be seen"
 көр:көр V-TV-NOPASS ; ! "see"
 қара:қара V-TV ; ! "look at"
+таңда:таңда V-TV ; ! "choose"
+түсін:түсін V-TV ; ! ""
+бер:бер Vinfl-AUX ; !
 бол:бол Vinfl-AUX ; !
+кел:кел Vinfl-AUX ; !
 
  LEXICON Interjections
 !=====================!

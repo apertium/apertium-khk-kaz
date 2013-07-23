@@ -190,6 +190,10 @@
 <e>       <p><l>хүүхэд<s n="n"/></l>           <r>бала<s n="n"/></r></p></e> <!--"child"-->
 <e>       <p><l>охин<s n="n"/></l>             <r>қыз<s n="n"/></r></p></e> <!--"girl"-->
 <e>       <p><l>дэлгүүр<s n="n"/></l>          <r>дүкен<s n="n"/></r></p></e> <!--"sore"-->
+<e>       <p><l>салин<s n="n"/></l>            <r>айлық<s n="n"/></r></p></e> <!--"salary"-->
+<e>       <p><l>гар<s n="n"/></l>              <r>қол<s n="n"/></r></p></e> <!--"arm/hand"-->
+<e>       <p><l>цас<s n="n"/></l>              <r>қар<s n="n"/></r></p></e> <!--"snow"-->
+<e>       <p><l>цус<s n="n"/></l>              <r>қан<s n="n"/></r></p></e> <!--"blood"-->
 
     <!-- Nationalities -->
     <!-- Languages -->
@@ -218,6 +222,7 @@
 <e>       <p><l>жижиг<s n="adj"/></l>             <r>кіші<s n="adj"/></r></p></e> <!-- "small"-->
 <e>       <p><l>жижигхэн<s n="adj"/></l>             <r>кішкентай<s n="adj"/></r></p></e> <!-- "small"-->
 
+
 <!-- SECTION: Adverbs -->
 
 <e>       <p><l>сайн<s n="adv"/></l>              <r>жақсы<s n="adv"/></r></p></e> <!--"well"-->
@@ -235,8 +240,12 @@
 <e>       <p><l>бол<s n="v"/><s n="iv"/></l>      <r>бол<s n="v"/><s n="iv"/></r></p></e> <!-- "1. быть" -->
 <e>       <p><l>үз<s n="v"/><s n="tv"/></l>      <r>көр<s n="v"/><s n="tv"/></r></p></e> <!-- "see" -->
 <e>       <p><l>хар<s n="v"/><s n="tv"/></l>  <r>қара<s n="v"/><s n="tv"/></r></p></e> <!--"look at"  -->
-<e>       <p><l>яв<s n="v"/><s n="tv"/></l>  <r>бар<s n="v"/><s n="iv"/></r></p></e> <!--"look at"  -->
-<e>       <p><l>оч<s n="v"/><s n="tv"/></l>  <r>бар<s n="v"/><s n="iv"/></r></p></e> <!--"look at"  -->
+<e>       <p><l>яв<s n="v"/><s n="iv"/></l>  <r>бар<s n="v"/><s n="iv"/></r></p></e> <!-- "go"  -->
+<e>       <p><l>оч<s n="v"/><s n="iv"/></l>  <r>бар<s n="v"/><s n="iv"/></r></p></e> <!--"go"  -->
+<e>       <p><l>ир<s n="v"/><s n="iv"/></l>  <r>кел<s n="v"/><s n="iv"/></r></p></e> <!--"go"  -->
+<e>       <p><l>сонго<s n="v"/><s n="tv"/></l>  <r>таңда<s n="v"/><s n="tv"/></r></p></e> <!--"choose"  -->
+<e>       <p><l>өг<s n="v"/><s n="tv"/></l>  <r>бер<s n="v"/><s n="tv"/></r></p></e> <!--"give"  -->
+<e>       <p><l>ойлго<s n="v"/><s n="tv"/></l>  <r>түсін<s n="v"/><s n="tv"/></r></p></e> <!--"understand"  -->
 
 <!-- SECTION: Interjections -->
 
