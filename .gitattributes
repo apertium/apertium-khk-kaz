@@ -11,8 +11,6 @@
 /apertium-khk-kaz.kaz-khk.rlx -text
 /apertium-khk-kaz.kaz-khk.t1x -text
 /apertium-khk-kaz.kaz-khk.t2x -text
-/apertium-khk-kaz.kaz.lexc -text
-/apertium-khk-kaz.kaz.twol -text
 /apertium-khk-kaz.khk-kaz.LR.att.gz -text
 /apertium-khk-kaz.khk-kaz.RL.att.gz -text
 /apertium-khk-kaz.khk-kaz.dix -text
@@ -20,8 +18,6 @@
 /apertium-khk-kaz.khk-kaz.rlx -text
 /apertium-khk-kaz.khk-kaz.t1x -text
 /apertium-khk-kaz.khk-kaz.t2x -text
-/apertium-khk-kaz.khk.lexc -text
-/apertium-khk-kaz.khk.twol -text
 /apertium-khk-kaz.post-kaz.dix -text
 /apertium-khk-kaz.post-khk.dix -text
 /apertium-view.sh -text
