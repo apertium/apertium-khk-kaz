@@ -1,23 +1,23 @@
 #!/bin/bash
 
-#assuming that you have the whole apertium tree in your source dir. and you are in khk-kaz directory
+# Assuming that you have the whole apertium tree in your source dir and you are in kaz-khk directory.
 
-python3 ../../trunk/apertium-tools/trim-lexc.py apertium-khk-kaz.khk-kaz.dix ../apertium-khk/apertium-khk.khk.lexc ../apertium-kaz/apertium-kaz.kaz.lexc
+# You have to compile apertium-kaz and apertium-khk first.
 
-cp /tmp/apertium-kaz.kaz.lexc.trimmed apertium-khk-kaz.kaz.lexc
-cp /tmp/apertium-khk.khk.lexc.trimmed apertium-khk-kaz.khk.lexc
+cp ../../languages/apertium-kaz/kaz.automorf.att.gz apertium-khk-kaz.kaz-khk.LR.att.gz
+cp ../../languages/apertium-kaz/kaz.autogen.att.gz apertium-khk-kaz.khk-kaz.RL.att.gz
+cp ../../incubator/apertium-khk/khk.automorf.att.gz apertium-khk-kaz.khk-kaz.LR.att.gz
+cp ../../incubator/apertium-khk/khk.autogen.att.gz apertium-khk-kaz.kaz-khk.RL.att.gz
 
-DIFF=$(diff ../apertium-kaz/apertium-kaz.kaz.twol apertium-khk-kaz.kaz.twol)
+DIFF=$(diff ../../languages/apertium-kaz/apertium-kaz.kaz.rlx apertium-khk-kaz.kaz-khk.rlx)
 if [ "$DIFF" != "" ]; then
-	cp ../apertium-kaz/apertium-kaz.kaz.twol apertium-khk-kaz.kaz.twol
+        cp ../../languages/apertium-kaz/apertium-kaz.kaz.rlx apertium-khk-kaz.kaz-khk.rlx
 fi;
-cp ../apertium-kaz/apertium-kaz.kaz.rlx apertium-khk-kaz.khk-kaz.rlx
 
-DIFF=$(diff ../apertium-khk/apertium-khk.khk.twol apertium-khk-kaz.khk.twol)
+DIFF=$(diff ../../incubator/apertium-khk/apertium-khk.khk.rlx apertium-khk-kaz.khk-kaz.rlx)
 if [ "$DIFF" != "" ]; then
-	cp ../apertium-khk/apertium-khk.khk.twol apertium-khk-kaz.khk.twol
+        cp ../../incubator/apertium-khk/apertium-khk.khk.rlx apertium-khk-kaz.khk-kaz.rlx
 fi;
-cp ../apertium-khk/apertium-khk.khk.rlx apertium-khk-kaz.khk-kaz.rlx
 
 exit 0
 
