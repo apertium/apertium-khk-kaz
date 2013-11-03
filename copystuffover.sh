@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cp ../apertium-khk/apertium-khk.khk.lexc ./apertium-khk-kaz.khk.lexc
-cp ../apertium-khk/apertium-khk.khk.twol ./apertium-khk-kaz.khk.twol
-cp ../apertium-kaz/apertium-kaz.kaz.lexc ./apertium-khk-kaz.kaz.lexc
-cp ../apertium-kaz/apertium-kaz.kaz.twol ./apertium-khk-kaz.kaz.twol
+cp ../apertium-khk/khk.automorf.hfst ./khk-kaz.automorf.hfst
+cp ../apertium-khk/khk.autogen.hfst ./kaz-khk.autogen.hfst
+cp ../../languages/apertium-kaz/kaz.automorf.hfst ./kaz-khk.automorf.hfst
+cp ../../languages/apertium-kaz/kaz.autogen.hfst ./khk-kaz.autogen.hfst
