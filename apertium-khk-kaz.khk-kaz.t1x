@@ -299,19 +299,6 @@
 
   <section-def-macros>
 
-    <def-macro n="case1" npar="1">
-      <let><var n="case"/><lit v=""/></let>
-      <let><var n="postposition"/><lit v=""/></let>
-      <choose> <!-- Converts instrumental case to nominative+белән<post> -->
-        <when>
-          <test>
-            <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="ins"/></equal>
-          </test>
-          <let><var n="postposition"/><concat><lit v=" ^белән"/><lit-tag v="post"/><lit v="$"/></concat></let>
-          <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>
-        </when>
-      </choose>
-    </def-macro> 
 
     <def-macro n="case2" npar="1">
       <let><var n="case"/><clip pos="1" side="tl" part="a_case"/></let>
@@ -455,9 +442,6 @@
         <pattern-item n="nom"/>
       </pattern>
       <action>
-        <call-macro n="case1">   <!-- translate kaz. <inst> with <nom>+белән -->
-          <with-param pos="1"/>
-        </call-macro>
         <call-macro n="case2">   <!-- take care of loc.subst thing -->
           <with-param pos="1"/>
         </call-macro>
@@ -485,9 +469,6 @@
         <pattern-item n="pron-dem-sim"/>
       </pattern>
       <action>
-        <call-macro n="case1">   <!-- translate kaz. <inst> with <nom>+белән -->
-          <with-param pos="1"/>
-        </call-macro>
         <call-macro n="case2">   <!-- take care of loc.subst thing -->
           <with-param pos="1"/>
         </call-macro>
@@ -513,9 +494,6 @@
         <pattern-item n="pron-pers_ref"/>
       </pattern>
       <action>
-        <call-macro n="case1">   <!-- translate kaz. <inst> with <nom>+белән -->
-          <with-param pos="1"/>
-        </call-macro>
         <call-macro n="case2">   <!-- take care of loc.subst thing -->
           <with-param pos="1"/>
         </call-macro>
@@ -540,9 +518,6 @@
         <pattern-item n="pron"/>
       </pattern>
       <action>
-        <call-macro n="case1">   <!-- translate kaz. <inst> with <nom>+белән -->
-          <with-param pos="1"/>
-        </call-macro>
         <call-macro n="case2">   <!-- take care of loc.subst thing -->
           <with-param pos="1"/>
         </call-macro>
@@ -568,9 +543,6 @@
       </pattern>
       <action>
         <call-macro n="nonfin1">
-          <with-param pos="1"/>
-        </call-macro>
-        <call-macro n="case1">
           <with-param pos="1"/>
         </call-macro>
         <call-macro n="case2">
@@ -601,9 +573,6 @@
       </pattern>
       <action>
         <call-macro n="nonfin1">
-          <with-param pos="1"/>
-        </call-macro>
-        <call-macro n="case1">
           <with-param pos="1"/>
         </call-macro>
         <call-macro n="case2">
@@ -656,9 +625,6 @@
         don't take case endings. So there is no *дүртәве in Tatar. >>
         Kaz. num.coll.subst is translated with tat. num.subst -->
         <call-macro n="numtype1">
-          <with-param pos="1"/>
-        </call-macro>
-        <call-macro n="case1">   <!-- translate kaz. <inst> with <nom>+белән -->
           <with-param pos="1"/>
         </call-macro>
         <call-macro n="case2">   <!-- take care of loc.subst thing -->
