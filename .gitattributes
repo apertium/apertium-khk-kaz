@@ -23,7 +23,6 @@
 /apertium-view.sh -text
 /autogen.sh -text
 /configure.ac -text
-/copystuffover.sh -text
 /kaz-khk.prob -text svneol=unset#unset
 /khk-kaz.prob -text svneol=unset#unset
 /modes.xml -text
