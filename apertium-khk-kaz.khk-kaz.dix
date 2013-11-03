@@ -206,6 +206,8 @@
 <e>       <p><l>тунхаглал<s n="n"/></l>        <r>декларация<s n="n"/></r></p></e> <!--"declaration"-->
 <e>       <p><l>гишүүн<s n="n"/></l>           <r>мүше<s n="n"/></r></p></e> <!--"member"-->
 <e>       <p><l>эрх<b/>чөлөө<s n="n"/></l>     <r>бостандық<s n="n"/></r></p></e> <!--"freedom"-->
+<e>       <p><l>пив<s n="n"/></l>              <r>сыра<s n="n"/></r></p></e> <!--"beer"-->
+<e>       <p><l>хувин<s n="n"/></l>            <r>шелек<s n="n"/></r></p></e> <!--"bucket"-->
 
     <!-- Nationalities -->
     <!-- Languages -->
@@ -242,13 +244,14 @@
 <!-- SECTION: Adverbs -->
 
 <e>       <p><l>сайн<s n="adv"/></l>              <r>жақсы<s n="adv"/></r></p></e> <!--"well"-->
-<e>       <p><l>их<s n="adv"/></l>              <r>өте<s n="adv"/></r></p></e> <!--"well"-->
-<e>       <p><l>дахин<s n="adv"/></l>              <r>қайта<s n="adv"/></r></p></e> <!--"again"-->
+<e>       <p><l>их<s n="adv"/></l>                <r>өте<s n="adv"/></r></p></e> <!--"well"-->
+<e>       <p><l>дахин<s n="adv"/></l>             <r>қайта<s n="adv"/></r></p></e> <!--"again"-->
 <e>       <p><l>одоо<s n="adv"/></l>              <r>қазір<s n="adv"/></r></p></e> <!--"now"-->
-<e>       <p><l>сая<s n="adv"/></l>              <r>жаңа<s n="adv"/></r></p></e> <!--"just now"-->
-<e>       <p><l>ягаад<s n="adv"/></l>              <r>неге<s n="adv"/></r></p></e> <!--"why"-->
+<e>       <p><l>сая<s n="adv"/></l>               <r>жаңа<s n="adv"/></r></p></e> <!--"just now"-->
+<e>       <p><l>ягаад<s n="adv"/></l>             <r>неге<s n="adv"/></r></p></e> <!--"why"-->
 <e>       <p><l>тийм<s n="adv"/></l>              <r>солай<s n="adv"/></r></p></e> <!--"in such a way"-->
 <e>       <p><l>илүү<s n="adv"/></l>              <r>әбден<s n="adv"/></r></p></e> <!--"rather"-->
+<e>       <p><l>маргааш<s n="adv"/></l>           <r>ертең<s n="adv"/></r></p></e> <!--"tomorrow"-->
 
 
 <!-- SECTION: Verbs -->
@@ -263,6 +266,8 @@
 <e>       <p><l>өг<s n="v"/><s n="tv"/></l>  <r>бер<s n="v"/><s n="tv"/></r></p></e> <!--"give"  -->
 <e>       <p><l>ойлго<s n="v"/><s n="tv"/></l>  <r>түсін<s n="v"/><s n="tv"/></r></p></e> <!--"understand"  -->
 <e>       <p><l>бүтээ<s n="v"/><s n="tv"/></l>           <r>жарат<s n="v"/><s n="tv"/></r></p></e> <!--"create"-->
+<e>       <p><l>мэд<s n="v"/><s n="tv"/></l>      <r>біл<s n="v"/><s n="tv"/></r></p></e> <!-- "know" -->
+<e>       <p><l>уу<s n="v"/><s n="tv"/></l>      <r>іш<s n="v"/><s n="tv"/></r></p></e> <!-- "drink" -->
 
 <!-- SECTION: Interjections -->
 
