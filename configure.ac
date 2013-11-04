@@ -8,7 +8,6 @@ AC_PROG_AWK
 m4_define([required_apertium_version], [3.2.0])
 PKG_CHECK_MODULES(APERTIUM,   apertium >= required_apertium_version, [], [PKG_CHECK_MODULES(APERTIUM,   apertium-3.2 >= required_apertium_version)])
                           
-
 AC_PATH_PROG(HFSTLEXC, hfst-lexc, no)
 if test x$ac_cv_path_HFSTLEXC = x
 then
@@ -84,6 +83,22 @@ else
   AC_SUBST(ZCAT,[gzcat])
 fi
 
+
+AC_ARG_VAR(KHKSRC, "Source directory for apertium-khk")
+AS_IF([test -z "$KHKSRC"],
+      [
+          PKG_CHECK_MODULES([APERTIUM_KHK], [apertium-khk])
+          KHKSRC=`pkg-config --variable=srcdir apertium-khk`
+      ],
+      [echo "Using apertium-khk from $KHKSRC"])
+
+AC_ARG_VAR(KAZSRC, "Source directory for apertium-kaz")
+AS_IF([test -z "$KAZSRC"],
+      [
+          PKG_CHECK_MODULES([APERTIUM_KAZ], [apertium-kaz])
+          KAZSRC=`pkg-config --variable=srcdir apertium-kaz`
+      ],
+      [echo "Using apertium-kaz from $KAZSRC"])
 
 
 AC_OUTPUT([Makefile])
