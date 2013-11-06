@@ -84,22 +84,7 @@ else
 fi
 
 
-AC_ARG_VAR(KHKSRC, "Source directory for apertium-khk")
-AS_IF([test -z "$KHKSRC"],
-      [
-          PKG_CHECK_MODULES([APERTIUM_KHK], [apertium-khk])
-          KHKSRC=`pkg-config --variable=srcdir apertium-khk`
-      ],
-      [echo "Using apertium-khk from $KHKSRC"])
-
-AC_ARG_VAR(KAZSRC, "Source directory for apertium-kaz")
-AS_IF([test -z "$KAZSRC"],
-      [
-          PKG_CHECK_MODULES([APERTIUM_KAZ], [apertium-kaz])
-          KAZSRC=`pkg-config --variable=srcdir apertium-kaz`
-      ],
-      [echo "Using apertium-kaz from $KAZSRC"])
-
+AP_CHECK_LING([1], [apertium-khk])
+AP_CHECK_LING([2], [apertium-kaz])
 
 AC_OUTPUT([Makefile])
-
