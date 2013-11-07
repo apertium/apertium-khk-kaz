@@ -157,7 +157,7 @@ EXTRA_DIST=$(PREFIX1).prob $(PREFIX2).prob \
            $(BASENAME).$(PREFIX2).t2x \
            modes.xml
 
-apertium_khk_kazmodesdir=$(prefix)/share/apertium/modes/
+apertium_modesdir=$(prefix)/share/apertium/modes/
 apertium_khk_kazdir=$(prefix)/share/apertium/$(BASENAME)/
 
 apertium_khk_kaz_DATA=$(TARGETS_COMMON) \
@@ -173,9 +173,9 @@ install-data-local:
 	$(prefix)/bin/apertium-gen-modes modes.xml $(BASENAME)
 	rm -rf modes
 	mv modes~ modes
-	test -d $(DESTDIR)$(apertium_khk_kazmodesdir) || mkdir $(DESTDIR)$(apertium_khk_kazmodesdir)
-	$(INSTALL_DATA) $(PREFIX1).mode $(DESTDIR)$(apertium_khk_kazmodesdir)
-	$(INSTALL_DATA) $(PREFIX2).mode $(DESTDIR)$(apertium_khk_kazmodesdir)
+	test -d $(DESTDIR)$(apertium_modesdir) || mkdir $(DESTDIR)$(apertium_modesdir)
+	$(INSTALL_DATA) $(PREFIX1).mode $(DESTDIR)$(apertium_modesdir)
+	$(INSTALL_DATA) $(PREFIX2).mode $(DESTDIR)$(apertium_modesdir)
 	rm $(PREFIX1).mode
 	rm $(PREFIX2).mode
 	$(INSTALL_DATA) $(BASENAME).$(PREFIX1).t1x $(DESTDIR)$(apertium_khk_kazdir)

@@ -19,7 +19,7 @@ Requirements
 You will need the following software installed:
 
 * lttoolbox (>= 3.1.2)
-* apertium (>= 3.1.1)
+* apertium (>= 3.2.0)
 * vislcg3 (>= 0.9.7.5129)
 * hfst (>= svn revision 3600)
 * apertium-khk
