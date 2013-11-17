@@ -65,13 +65,13 @@ For monolingual data, see the modules apertium-khk and apertium-kaz.
 
 * apertium-khk-kaz.khk-kaz.lrx         - Lexical selection rules for translating into Kazakh
 * apertium-khk-kaz.khk-kaz.t1x         - Transfer rules for translating into Kazakh (first pass)
-* apertium-khk-kaz.khk-kaz.t2x         - Transfer rules for  translating into Kazakh (second pass)
+* apertium-khk-kaz.khk-kaz.t2x         - Transfer rules for translating into Kazakh (second pass)
 
 * apertium-khk-kaz.khk-kaz.dix         - Bilingual dictionary 
 
-* apertium-khk-kaz.khk-kaz.lrx         - Lexical selection rules for translating into Mongolian
-* apertium-khk-kaz.khk-kaz.t1x         - Transfer rules for translating into Mongolian (first pass)
-* apertium-khk-kaz.khk-kaz.t2x         - Transfer rules for  translating into Mongolian (second pass)
+* apertium-khk-kaz.kaz-khk.lrx         - Lexical selection rules for translating into Mongolian
+* apertium-khk-kaz.kaz-khk.t1x         - Transfer rules for translating into Mongolian (first pass)
+* apertium-khk-kaz.kaz-khk.t2x         - Transfer rules for translating into Mongolian (second pass)
 
 * modes.xml                            - Translation modes
 
