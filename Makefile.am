@@ -25,7 +25,7 @@ TARGETS_COMMON = $(PREFIX1).autobil.bin $(PREFIX2).autobil.bin \
 .PRECIOUS: .deps/.d
 
 ###############################################################################
-## Kazakh transducer
+## Mongolian→Kazakh monolingual transducers
 ###############################################################################
 
 .deps/$(PREFIX1).autobil.prefixes: $(PREFIX1).autobil.bin .deps/.d
@@ -48,7 +48,7 @@ $(PREFIX1).autogen.bin: $(AP_LIB2)/$(LANG2).autogen.bin
 	cp $< $@
 
 ###############################################################################
-## Mongolian transducer
+##  Kazakh→Mongolian monolingual transducers
 ###############################################################################
 
 .deps/$(PREFIX2).autobil.prefixes: $(PREFIX2).autobil.bin .deps/.d
@@ -169,15 +169,14 @@ noinst_DATA=modes/$(PREFIX1).mode
 
 
 install-data-local:
-	mv modes modes~
+	mv modes modes.bak
 	$(prefix)/bin/apertium-gen-modes modes.xml $(BASENAME)
 	rm -rf modes
-	mv modes~ modes
+	mv modes.bak modes
 	test -d $(DESTDIR)$(apertium_modesdir) || mkdir $(DESTDIR)$(apertium_modesdir)
-	$(INSTALL_DATA) $(PREFIX1).mode $(DESTDIR)$(apertium_modesdir)
-	$(INSTALL_DATA) $(PREFIX2).mode $(DESTDIR)$(apertium_modesdir)
-	rm $(PREFIX1).mode
-	rm $(PREFIX2).mode
+	modes=`xmllint --xpath '//mode[@install="yes"]/@name' modes.xml | sed 's/ *name="\([^"]*\)"/\1.mode /g'`; \
+		$(INSTALL_DATA) $$modes $(DESTDIR)$(apertium_modesdir); \
+		rm $$modes
 	$(INSTALL_DATA) $(BASENAME).$(PREFIX1).t1x $(DESTDIR)$(apertium_khk_kazdir)
 	$(INSTALL_DATA) $(BASENAME).$(PREFIX1).t2x $(DESTDIR)$(apertium_khk_kazdir)
 	$(INSTALL_DATA) $(BASENAME).$(PREFIX2).t1x $(DESTDIR)$(apertium_khk_kazdir)
