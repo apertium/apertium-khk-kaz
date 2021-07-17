@@ -32,3 +32,12 @@
 /khk-kaz.t2x.bin
 /missing
 /modes
+/*.gz
+/*.pc
+/*.zhfst
+/.DS_Store
+/ap_include.am
+/*-*.prob
+/config.in
+/config
+/test/*-output.txt

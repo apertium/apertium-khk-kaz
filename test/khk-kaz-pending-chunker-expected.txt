@@ -1,0 +1,12 @@
+[R8IfShP678w3#0] ^сен<prn><pers><p2><sg><nom>$ ^біл<v><tv><pres><neg>$
+[/R8IfShP678w3]
+[eEwANdUyILsQ#0] ^Сен<prn><pers><p2><sg><nom>$ ^ертең<adv>$ ^кел<v><iv><pres>$ ^ма<qst>$^?<sent>$
+[/eEwANdUyILsQ]
+[hOw953ecETEM#0] ^мен<prn><pers><p1><sg><nom>$ ^үй<n><nom>$ ^*лүүгээ$ ^*буцах$ ^*ёстой$
+[/hOw953ecETEM]
+[k11SU1U81Be6#0] ^мен<prn><pers><p1><sg><dat>$ ^бұл<det><dem>$ ^кітап<n><nom>$ ^өте<adv>$ ^*дуртай$
+[/k11SU1U81Be6]
+[neXUy58IaOhb#0] ^мен<prn><pers><p1><sg><nom>$ ^*хувингээр$ ^сыра<n><nom>$ ^іш<v><tv><pres>$
+[/neXUy58IaOhb]
+[uQaV7UMLZHfT#0] ^мен<prn><pers><p1><sg><nom>$ ^үй<n><nom>$ ^*санав$
+[/uQaV7UMLZHfT]

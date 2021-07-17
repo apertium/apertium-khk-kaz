@@ -1,0 +1,6 @@
+[3RZqY8e6slvv#0] ^Сен/сен<prn><pers><p2><sg><nom>$ ^ертең/ертең<adv>$ ^келесің бе/кел<v><iv><aor><p2><sg>+ма<qst>$^?/?<sent>$
+[/3RZqY8e6slvv]
+[ME0f656QRgXa#0] ^сен/сен<prn><pers><p2><sg><nom>$ ^білмейсің/біл<v><tv><neg><aor><p2><sg>$
+[/ME0f656QRgXa]
+[eC9Zeuc9Oka8#0] ^шелекпен/шелек<n><ins>$ ^сыра/сыра<n><nom>/сыра<n><attr>/сыра<n><nom>+е<cop><aor><p3><pl>/сыра<n><nom>+е<cop><aor><p3><sg>$ ^ішемін/іш<v><tv><aor><p1><sg>$
+[/eC9Zeuc9Oka8]

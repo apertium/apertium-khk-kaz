@@ -1,0 +1,12 @@
+[R8IfShP678w3#0] ^чи<prn><pers><p2><sg><nom>/сен<prn><pers><p2><sg><nom>$ ^мэд<v><tv><aor><neg>/біл<v><tv><aor><neg>$
+[/R8IfShP678w3]
+[eEwANdUyILsQ#0] ^Чи<prn><pers><p2><sg><nom>/Сен<prn><pers><p2><sg><nom>$ ^маргааш<adv>/ертең<adv>$ ^ир<v><iv><aor>/кел<v><iv><aor>$ ^уу<qst>/ма<qst>$^?<sent>/?<sent>$
+[/eEwANdUyILsQ]
+[hOw953ecETEM#0] ^би<prn><pers><p1><sg><nom>/мен<prn><pers><p1><sg><nom>$ ^гэр<n><nom>/үй<n><nom>$ ^*лүүгээ/*лүүгээ$ ^*буцах/*буцах$ ^*ёстой/*ёстой$
+[/hOw953ecETEM]
+[k11SU1U81Be6#0] ^би<prn><pers><p1><sg><dat>/мен<prn><pers><p1><sg><dat>$ ^энэ<det>/бұл<det><dem>$ ^ном<n><nom>/кітап<n><nom>$ ^их<adv>/өте<adv>$ ^*дуртай/*дуртай$
+[/k11SU1U81Be6]
+[neXUy58IaOhb#0] ^би<prn><pers><p1><sg><nom>/мен<prn><pers><p1><sg><nom>$ ^*хувингээр/*хувингээр$ ^пив<n><nom>/сыра<n><nom>$ ^уу<v><tv><aor>/іш<v><tv><aor>$
+[/neXUy58IaOhb]
+[uQaV7UMLZHfT#0] ^би<prn><pers><p1><sg><nom>/мен<prn><pers><p1><sg><nom>$ ^гэр<n><nom><refl>/үй<n><nom><refl>$ ^*санав/*санав$
+[/uQaV7UMLZHfT]

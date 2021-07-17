@@ -1,0 +1,6 @@
+[3RZqY8e6slvv#0] ~^Чи<prn><pers><p2><sg><nom>$ ~^маргааш<adv>$ ^ир<v><iv><aor><p2><sg>$ ^уу<qst>$~^?<sent>$
+[/3RZqY8e6slvv]
+[ME0f656QRgXa#0] ~^чи<prn><pers><p2><sg><nom>$ ~^мэд<v><tv><neg><aor><p2><sg>$
+[/ME0f656QRgXa]
+[eC9Zeuc9Oka8#0] ~^хувин<n><ins>$ ~^пив<n><nom>$ ~^а<cop><aor><p3><sg>$ ~^уу<v><tv><aor><p1><sg>$
+[/eC9Zeuc9Oka8]

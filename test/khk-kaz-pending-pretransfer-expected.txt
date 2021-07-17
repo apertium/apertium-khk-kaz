@@ -1,0 +1,12 @@
+[R8IfShP678w3#0] ^чи<prn><pers><p2><sg><nom>$ ^мэд<v><tv><aor><neg>$
+[/R8IfShP678w3]
+[eEwANdUyILsQ#0] ^Чи<prn><pers><p2><sg><nom>$ ^маргааш<adv>$ ^ир<v><iv><aor>$ ^уу<qst>$^?<sent>$
+[/eEwANdUyILsQ]
+[hOw953ecETEM#0] ^би<prn><pers><p1><sg><nom>$ ^гэр<n><nom>$ ^*лүүгээ$ ^*буцах$ ^*ёстой$
+[/hOw953ecETEM]
+[k11SU1U81Be6#0] ^би<prn><pers><p1><sg><dat>$ ^энэ<det>$ ^ном<n><nom>$ ^их<adv>$ ^*дуртай$
+[/k11SU1U81Be6]
+[neXUy58IaOhb#0] ^би<prn><pers><p1><sg><nom>$ ^*хувингээр$ ^пив<n><nom>$ ^уу<v><tv><aor>$
+[/neXUy58IaOhb]
+[uQaV7UMLZHfT#0] ^би<prn><pers><p1><sg><nom>$ ^гэр<n><nom><refl>$ ^*санав$
+[/uQaV7UMLZHfT]

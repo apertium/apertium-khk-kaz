@@ -1,0 +1,10 @@
+{
+    "kaz-khk-pending": {
+        "input": "kaz-khk-pending-input.txt",
+        "mode": "kaz-khk"
+    },
+    "khk-kaz-pending": {
+        "input": "khk-kaz-pending-input.txt",
+        "mode": "khk-kaz"
+    }
+}
